@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <script src="Expenses.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+    <link rel="stylesheet" href="Expenses.css">
+     
+    
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+   <title>Responsive Regisration Form </title>
+</head>
+<body onload="toggleFields()">
+    <div class = "container">
+        <header class="running-underline">Expenses</header>
+     <form action = "#" method = "post" id = "paymentform">
+        <div class="form first">
+           
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Date : </label>
+                        <input type="date" placeholder="Enter birth date" required>
+                    </div>
+        
+
+                    <div class="input-field">
+                        <label for="paymentStatus">Payment Status :</label>
+                        <select id="paymentStatus" onchange="toggleFields()">
+                            <option value="FP">Full Paid</option>
+                            <option value="PL">Paid to previous lenders</option>
+                            <option value="OA">On Account</option>
+                        </select>
+
+                        <div id="amountField" style="display:none;">
+                              <label for="amount">Amount :</label>
+                              <input type="text" id="amount">
+                              <span id="amountError" style="color:red; display:none;">*Choose a payment status first</span>
+                        </div>
+                            
+                        <div id="otherFields" style="display:none;">
+                              <label for="paidAmount">Paid Amount :</label>
+                              <input type="text" id="paidAmount" value="0.00">
+                              <label for="type">Type :</label>
+                              <select id="type">
+                                <option value="AP">AP</option>
+                                <option value="NP">NP</option>
+                              </select>
+                        </div>
+
+                     </div>
+
+                </div>
+                
+        
+            
+          </div>
+        <button type = "submit">Submit</button>
+     </form>   
+
+    </div>
+
+
+</body>
+</html>
