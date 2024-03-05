@@ -10,14 +10,6 @@ const body = document.querySelector('body'),
     searchBtn.addEventListener("click", () => {
       sidebar.classList.remove("close");
     })
-    modeSwitch.addEventListener("click", () => {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        modeText.innerText = "Light mode";
-      } else {
-        modeText.innerText = "Dark mode";
-      }
-    });
     document.addEventListener("DOMContentLoaded", function() {
       // Toggle fields based on payment status
       toggleFields();
