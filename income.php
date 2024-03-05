@@ -95,7 +95,7 @@
       <header>Income</header>
     </div>
     <div class="form">
-      <form action="#">
+      <form action="connect.php" method="post">
           <div class="form first">
             <div class="fields">
               <div class="input-field">
