@@ -10,6 +10,14 @@ const body = document.querySelector('body'),
     searchBtn.addEventListener("click", () => {
       sidebar.classList.remove("close");
     })
+    modeSwitch.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        modeText.innerText = "Light mode";
+      } else {
+        modeText.innerText = "Dark mode";
+      }
+    });
     document.addEventListener("DOMContentLoaded", function() {
       // Toggle fields based on payment status
       toggleFields();
@@ -63,15 +71,10 @@ const body = document.querySelector('body'),
           paidAmount.value = '0';
       }
   }
-  
-  function preventZero(inputField) {
-    if (inputField.value === '0') {
-        inputField.value = '';
-    }
-    
-    // Enable/disable submit button based on input value
-    var submitButton = document.getElementById('submitBtn');
-    submitButton.disabled = inputField.value === '0';
-}
+
+$('input[type=number]').on('mousewheel', function(e) {
+  $(e.target).blur();
+});
+
    
     
