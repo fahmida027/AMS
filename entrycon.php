@@ -1,5 +1,6 @@
 <?php
 require_once("config.php");
+session_start();
 global $conn;
 function userID() {
     global $userID;

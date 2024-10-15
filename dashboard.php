@@ -7,6 +7,13 @@ include("config.php");
 if ($conn == false) {
     die("ERROR: could not connect." . mysqli_connect_error());
 }
+global $userID;
+    if (!isset($_SESSION['userID'])) {
+        header("location:login.php");
+        die();
+    } else {
+        $userID = $_SESSION["userID"];
+    }
 
 $year = date("Y");
 
@@ -17,7 +24,7 @@ $income_sql = "
     LEFT JOIN accountsname act ON act.accCode = t.tAccCode
     WHERE (YEAR(t.tDate) = ?)
         AND act.accName = 'Income'
-        AND t.tuID = 1
+        AND t.tuID = '$userID'
     GROUP BY MONTH(t.tDate)
 ";
 
@@ -40,7 +47,7 @@ $expense_sql = "
     LEFT JOIN accountsname act ON act.accCode = t.tAccCode
     WHERE (YEAR(t.tDate) = ?)
         AND act.accName = 'Expenses'
-        AND t.tuID = 1
+        AND t.tuID = '$userID'
     GROUP BY MONTH(t.tDate)
 ";
 
@@ -142,7 +149,7 @@ mysqli_close($conn);
         data: {
             labels: ['Income', 'Expenses'],
             datasets: [{
-                label: 'Income and Expenses',
+                label: 'Amount',
                 data: [<?php echo array_sum($income_data); ?>, <?php echo array_sum($expense_data); ?>],
                 backgroundColor: [
                     'rgba(54, 162, 235, 0.5)',

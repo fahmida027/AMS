@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3308
--- Generation Time: Sep 15, 2024 at 08:32 PM
+-- Host: localhost:3307:3307
+-- Generation Time: Sep 25, 2024 at 09:21 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,16 +39,17 @@ CREATE TABLE `accountsname` (
 -- Dumping data for table `accountsname`
 --
 
-INSERT INTO `accountsname` VALUES('A001', 1, 'Cash');
-INSERT INTO `accountsname` VALUES('A002', 1, 'Equipments');
-INSERT INTO `accountsname` VALUES('A003', 1, 'Supplies');
-INSERT INTO `accountsname` VALUES('A004', 1, 'Account Receivable');
-INSERT INTO `accountsname` VALUES('L001', 2, 'Accounts Payable');
-INSERT INTO `accountsname` VALUES('L002', 2, 'Notes Payable');
-INSERT INTO `accountsname` VALUES('OE001', 3, 'Income');
-INSERT INTO `accountsname` VALUES('OE002', 3, 'Capital');
-INSERT INTO `accountsname` VALUES('OE003', 3, 'Expenses');
-INSERT INTO `accountsname` VALUES('OE004', 3, 'Drawings');
+INSERT INTO `accountsname` (`accCode`, `acatID`, `accName`) VALUES
+('A001', 1, 'Cash'),
+('A002', 1, 'Equipments'),
+('A003', 1, 'Supplies'),
+('A004', 1, 'Account Receivable'),
+('L001', 2, 'Accounts Payable'),
+('L002', 2, 'Notes Payable'),
+('OE001', 3, 'Income'),
+('OE002', 3, 'Capital'),
+('OE003', 3, 'Expenses'),
+('OE004', 3, 'Drawings');
 
 -- --------------------------------------------------------
 
@@ -65,9 +66,10 @@ CREATE TABLE `accounttype` (
 -- Dumping data for table `accounttype`
 --
 
-INSERT INTO `accounttype` VALUES(1, 'Assets');
-INSERT INTO `accounttype` VALUES(2, 'Liabilities');
-INSERT INTO `accounttype` VALUES(3, 'Owner Equity');
+INSERT INTO `accounttype` (`catID`, `catName`) VALUES
+(1, 'Assets'),
+(2, 'Liabilities'),
+(3, 'Owner Equity');
 
 -- --------------------------------------------------------
 
@@ -87,20 +89,51 @@ CREATE TABLE `details` (
 -- Dumping data for table `details`
 --
 
-INSERT INTO `details` VALUES(67, 60, 'A001', 7000, 'Capital for business');
-INSERT INTO `details` VALUES(68, 61, 'A001', -900, 'office rent');
-INSERT INTO `details` VALUES(69, 62, 'L001', 600, 'supplies on account on accounts payable');
-INSERT INTO `details` VALUES(70, 63, 'A001', -125, 'for advertisement in the County news');
-INSERT INTO `details` VALUES(71, 64, 'A001', 4000, 'for performing service');
-INSERT INTO `details` VALUES(72, 65, 'A001', -1000, 'for personal use');
-INSERT INTO `details` VALUES(73, 66, 'OE001', 5400, 'gave service on account');
-INSERT INTO `details` VALUES(74, 67, 'A001', -2500, 'salaries for employees');
-INSERT INTO `details` VALUES(75, 68, 'A001', -600, 'paid for the supplies on account(AP) on may 3');
-INSERT INTO `details` VALUES(76, 69, 'A001', -4000, 'received from previous borrowers from May 15');
-INSERT INTO `details` VALUES(77, 70, 'L002', 5000, 'loan from bank');
-INSERT INTO `details` VALUES(78, 71, 'L001', 4200, 'equipments on account on accounts payable');
-INSERT INTO `details` VALUES(79, 72, 'A001', -275, 'utilities');
-INSERT INTO `details` VALUES(80, 73, 'A001', 1000, 'my money');
+INSERT INTO `details` (`dTNo`, `dID`, `dAccCode`, `amount`, `description`) VALUES
+(67, 60, 'A001', 7000, 'Capital for business'),
+(68, 61, 'A001', -900, 'office rent'),
+(69, 62, 'L001', 600, 'supplies on account on accounts payable'),
+(70, 63, 'A001', -125, 'for advertisement in the County news'),
+(71, 64, 'A001', 4000, 'for performing service'),
+(72, 65, 'A001', -1000, 'for personal use'),
+(73, 66, 'OE001', 5400, 'gave service on account'),
+(74, 67, 'A001', -2500, 'salaries for employees'),
+(75, 68, 'A001', -600, 'paid for the supplies on account(AP) on may 3'),
+(76, 69, 'A001', -4000, 'received from previous borrowers from May 15'),
+(77, 70, 'L002', 5000, 'loan from bank'),
+(78, 71, 'L001', 4200, 'equipments on account on accounts payable'),
+(79, 72, 'A001', -275, 'utilities'),
+(80, 73, 'A001', 5000, 'Income from K.K co.'),
+(81, 74, 'A001', 500, 'income'),
+(82, 75, 'A001', 400, 'income'),
+(83, 76, 'A001', 15000, 'income'),
+(84, 77, 'A001', 13000, 'income'),
+(85, 78, 'A001', 18000, 'income'),
+(86, 79, 'A001', 20000, 'income'),
+(87, 80, 'A001', 25000, 'income'),
+(88, 81, 'A001', 10000, 'income'),
+(89, 82, 'A001', 30000, 'income'),
+(90, 83, 'A001', 23000, 'income'),
+(91, 84, 'A001', 33000, 'income'),
+(92, 85, 'A001', 12000, 'income'),
+(93, 86, 'A001', -5000, 'expense'),
+(94, 87, 'A001', -3000, 'expense'),
+(95, 88, 'A001', -7000, 'expense'),
+(96, 89, 'A001', -4000, 'expense'),
+(97, 90, 'A001', -2000, 'expense'),
+(98, 91, 'A001', -1000, 'expense'),
+(99, 92, 'A001', -500, 'expense'),
+(100, 93, 'A001', -3500, 'expense'),
+(101, 94, 'A001', -5300, 'expense'),
+(102, 95, 'A001', -900, 'expense'),
+(103, 96, 'A001', -2000, 'expense'),
+(104, 97, 'A001', -3000, 'expense'),
+(105, 98, 'A001', -4000, 'expense'),
+(106, 99, 'A001', -2000, 'expense'),
+(107, 100, 'A001', -1500, 'expense'),
+(108, 101, 'A001', -2500, 'expense'),
+(109, 102, 'A001', 5000, 'income'),
+(110, 103, 'A001', 8000, 'income');
 
 -- --------------------------------------------------------
 
@@ -120,20 +153,51 @@ CREATE TABLE `transactions` (
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` VALUES('OE002', 67, '2024-03-01', 'C', 1);
-INSERT INTO `transactions` VALUES('OE003', 68, '2024-03-02', 'D', 1);
-INSERT INTO `transactions` VALUES('A003', 69, '2024-03-03', 'D', 1);
-INSERT INTO `transactions` VALUES('OE003', 70, '2024-03-05', 'D', 1);
-INSERT INTO `transactions` VALUES('OE001', 71, '2024-03-09', 'C', 1);
-INSERT INTO `transactions` VALUES('OE004', 72, '2024-03-12', 'D', 1);
-INSERT INTO `transactions` VALUES('A004', 73, '2024-03-15', 'D', 1);
-INSERT INTO `transactions` VALUES('OE003', 74, '2024-03-17', 'D', 1);
-INSERT INTO `transactions` VALUES('L001', 75, '2024-03-20', 'D', 1);
-INSERT INTO `transactions` VALUES('A004', 76, '2024-03-23', 'C', 1);
-INSERT INTO `transactions` VALUES('A001', 77, '2024-03-26', 'D', 1);
-INSERT INTO `transactions` VALUES('A002', 78, '2024-03-29', 'D', 1);
-INSERT INTO `transactions` VALUES('OE003', 79, '2024-03-30', 'D', 1);
-INSERT INTO `transactions` VALUES('OE001', 80, '2024-09-12', 'C', 1);
+INSERT INTO `transactions` (`tAccCode`, `tNo`, `tDate`, `tType`, `tuID`) VALUES
+('OE002', 67, '2024-03-01', 'C', 1),
+('OE003', 68, '2024-03-02', 'D', 1),
+('A003', 69, '2024-03-03', 'D', 1),
+('OE003', 70, '2024-03-05', 'D', 1),
+('OE001', 71, '2024-03-09', 'C', 1),
+('OE004', 72, '2024-03-12', 'D', 1),
+('A004', 73, '2024-03-15', 'D', 1),
+('OE003', 74, '2024-03-17', 'D', 1),
+('L001', 75, '2024-03-20', 'D', 1),
+('A004', 76, '2024-03-23', 'C', 1),
+('A001', 77, '2024-03-26', 'D', 1),
+('A002', 78, '2024-03-29', 'D', 1),
+('OE003', 79, '2024-03-30', 'D', 1),
+('OE001', 80, '2024-03-20', 'C', 1),
+('OE001', 81, '2024-02-20', 'C', 1),
+('OE001', 82, '2024-04-18', 'C', 1),
+('OE001', 83, '2024-01-02', 'C', 1),
+('OE001', 84, '2024-05-17', 'C', 1),
+('OE001', 85, '2024-06-20', 'C', 1),
+('OE001', 86, '2024-07-26', 'C', 1),
+('OE001', 87, '2024-08-20', 'C', 1),
+('OE001', 88, '2024-09-21', 'C', 1),
+('OE001', 89, '2024-09-20', 'C', 1),
+('OE001', 90, '2024-10-18', 'C', 1),
+('OE001', 91, '2024-11-20', 'C', 1),
+('OE001', 92, '2024-12-20', 'C', 1),
+('OE003', 93, '2024-01-20', 'D', 1),
+('OE003', 94, '2024-02-20', 'D', 1),
+('OE003', 95, '2024-04-20', 'D', 1),
+('OE003', 96, '2024-05-20', 'D', 1),
+('OE003', 97, '2024-06-20', 'D', 1),
+('OE003', 98, '2024-07-06', 'D', 1),
+('OE003', 99, '2024-07-06', 'D', 1),
+('OE003', 100, '2024-08-03', 'D', 1),
+('OE003', 101, '2024-08-03', 'D', 1),
+('OE003', 102, '2024-09-07', 'D', 1),
+('OE003', 103, '2024-08-20', 'D', 1),
+('OE003', 104, '2024-09-20', 'D', 1),
+('OE003', 105, '2024-10-20', 'D', 1),
+('OE003', 106, '2024-10-20', 'D', 1),
+('OE003', 107, '2024-11-20', 'D', 1),
+('OE003', 108, '2024-12-20', 'D', 1),
+('OE001', 109, '2024-02-20', 'C', 1),
+('OE001', 110, '2024-04-20', 'C', 1);
 
 -- --------------------------------------------------------
 
@@ -152,8 +216,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` VALUES(1, 'user@gmail.com', '$2y$10$2p/sd/fIaqwwdlFWVUlQO.g8UUCB7fSXwFnBtEokKEAjqgPsvC30q', 'XYZ Business Firm');
-INSERT INTO `user` VALUES(2, 'abc@gmail.com', '$2y$10$Pt5s5hQyf.pGTi4nOQMvleLQOVqsGNcea7OqJBCDldOBvTLmu.Lwu', 'Toasean Elmah');
+INSERT INTO `user` (`userID`, `email`, `password`, `name`) VALUES
+(1, 'user@gmail.com', '$2y$10$2p/sd/fIaqwwdlFWVUlQO.g8UUCB7fSXwFnBtEokKEAjqgPsvC30q', 'user@gmail.com'),
+(2, 'abc@gmail.com', '$2y$10$Pt5s5hQyf.pGTi4nOQMvleLQOVqsGNcea7OqJBCDldOBvTLmu.Lwu', 'Toasean Elmah');
 
 --
 -- Indexes for dumped tables
@@ -207,13 +272,13 @@ ALTER TABLE `accounttype`
 -- AUTO_INCREMENT for table `details`
 --
 ALTER TABLE `details`
-  MODIFY `dID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `dID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `tNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `tNo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT for table `user`

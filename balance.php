@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('fpdfGenerator/fpdf.php');
 require_once("config.php");
 
