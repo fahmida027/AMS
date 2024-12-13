@@ -125,7 +125,7 @@ if (isset($_POST['save']))
         } 
         else
         {
-            $error_message = "ERROR: Could not update data. " . mysqli_error($conn);
+            die(mysqli_error($conn));
         }
 }
 else 
