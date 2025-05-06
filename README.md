@@ -93,13 +93,13 @@ Password: Abc1234$
 ![Login Screenshot](screenshots/home%20(2).png)
 
 ### 🧾 Dashboard
-![Dashboard Screenshot](screenshots/dashboard.png)
+![Dashboard Screenshot](screenshots/Dashboard.png)
 
 ### 📊 Wallet
 ![Charts Screenshot](screenshots/wallet.png)
 
 ### 🧮 Financial Report
-![Financial Report Screenshot](screenshots/ledger.pdf)
+![Financial Report Screenshot](screenshots/ledger.png)
 
 ---
 
@@ -114,6 +114,6 @@ If you'd like to contribute, raise an issue or pull request.
 
 For suggestions or collaboration opportunities:
 
-📧 toasean.csecu@gmail.com.com  
+📧 toasean.csecu@gmail.com.
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/toasean-elmah-tasean-b70a66286/)
 
