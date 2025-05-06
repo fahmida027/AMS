@@ -75,7 +75,7 @@ Copy the entire project folder into your XAMPP `htdocs` directory.
 Open your browser and go to:
 
 ```
-http://localhost/ams
+http://localhost/AMS/login.php
 ```
 
 Use the following demo credentials to log in:
@@ -84,7 +84,7 @@ Use the following demo credentials to log in:
 Username: xyz@gmail.com  
 Password: Abc1234$
 ```
-
+Or, you can create your own account.
 ---
 
 ## 📷 Screenshots
