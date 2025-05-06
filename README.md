@@ -75,7 +75,7 @@ Copy the entire project folder into your XAMPP `htdocs` directory.
 Open your browser and go to:
 
 ```
-http://localhost/AMS/login.php
+http://localhost/AMS/src/login.php
 ```
 
 Use the following demo credentials to log in:
@@ -84,7 +84,10 @@ Use the following demo credentials to log in:
 Username: xyz@gmail.com  
 Password: Abc1234$
 ```
+
 Or, you can create your own account.
+ 
+ 
 ---
 
 ## 📷 Screenshots
@@ -113,7 +116,8 @@ If you'd like to contribute, raise an issue or pull request.
 ## 🌐 Contact
 
 For suggestions or collaboration opportunities:
-
-📧 toasean.csecu@gmail.com.
+📧 afia.csecu@gmail.com
+📧 fahmida.csecu@gmail.com
+📧 toasean.csecu@gmail.com
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/toasean-elmah-tasean-b70a66286/)
 
