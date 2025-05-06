@@ -116,7 +116,7 @@ If you'd like to contribute, raise an issue or pull request.
 ## 🌐 Contact
 
 For suggestions or collaboration opportunities: <br>
-📧 afia.csecu@gmail.com | 🔗 [LinkedIn Profile](https://www.linkedin.com/in/afia-tasnim-tahura-007852271/) <br>
-📧 fahmida.csecu@gmail.com | 🔗 [LinkedIn Profile](https://www.linkedin.com/in/umme-fahmida-trisha-544b78333/) <br> 
-📧 toasean.csecu@gmail.com | 🔗 [LinkedIn Profile](https://www.linkedin.com/in/toasean-elmah-tasean-b70a66286/)
+📧 afia.csecu@gmail.com | [LinkedIn Profile](https://www.linkedin.com/in/afia-tasnim-tahura-007852271/) <br>
+📧 fahmida.csecu@gmail.com | [LinkedIn Profile](https://www.linkedin.com/in/umme-fahmida-trisha-544b78333/) <br> 
+📧 toasean.csecu@gmail.com | [LinkedIn Profile](https://www.linkedin.com/in/toasean-elmah-tasean-b70a66286/)
 
