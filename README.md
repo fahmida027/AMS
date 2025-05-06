@@ -115,9 +115,9 @@ If you'd like to contribute, raise an issue or pull request.
 
 ## 🌐 Contact
 
-For suggestions or collaboration opportunities:
-📧 afia.csecu@gmail.com
-📧 fahmida.csecu@gmail.com
-📧 toasean.csecu@gmail.com
+For suggestions or collaboration opportunities: <br>
+📧 afia.csecu@gmail.com <br>
+📧 fahmida.csecu@gmail.com <br>
+📧 toasean.csecu@gmail.com <br>
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/toasean-elmah-tasean-b70a66286/)
 
